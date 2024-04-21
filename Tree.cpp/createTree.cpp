@@ -8,7 +8,6 @@ class Node{
     Node(int data){
         this->data=data;
     }
-
 };
 void printTree(Node*root){
     cout<<root->data<<":";
@@ -20,7 +19,6 @@ void printTree(Node*root){
     for(int i=0;i<root->children.size();i++){
         printTree(root->children[i]);
     }
-
 };
 int main(){
     Node*root=new Node(1);
@@ -28,6 +26,5 @@ int main(){
     Node*node2=new Node(3);
     root->children.push_back(node1);
     root->children.push_back(node2);
-
     printTree(root);
 }

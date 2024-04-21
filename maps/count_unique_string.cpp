@@ -11,7 +11,9 @@ int main(){
         cin>>s;
         m[s]=m[s]+1;
         /**
-         A loop runs n times, where each time it reads a string s from the user. It then increments the corresponding value in the map m for that string. If the string is encountered for the first time, its count is initialized to 
+         A loop runs n times, where each time it reads a string s from the user. 
+         It then increments the corresponding value in the map m for that string. 
+         If the string is encountered for the first time, its count is initialized to 
          **/
     }
     for(auto pr:m){
