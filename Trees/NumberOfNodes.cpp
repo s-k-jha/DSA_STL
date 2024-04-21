@@ -65,8 +65,19 @@ TreeNode *takeInputLevelWise()
     }
     return root;
 }
+
+
+int numberOfnodes(TreeNode*root){
+    int count=1;
+    for(int i=0; i < root->children.size();i++){
+        count+= numberOfnodes(root->children[i]);
+    }
+    return count;
+}
 int main()
 {
     TreeNode *root = takeInputLevelWise();
     printTreeLevelWise(root);
+
+    cout<<numberOfnodes(root);
 }

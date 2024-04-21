@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include<algorithm>
 using namespace std;
 
 class TreeNode
@@ -65,8 +66,20 @@ TreeNode *takeInputLevelWise()
     }
     return root;
 }
+int Greater_Node_Value(TreeNode*root){
+    int Greater_value = root->data;
+    for(int i=0;i<root->children.size();i++){
+        Greater_value= max(Greater_value,Greater_Node_Value(root->children[i]) );
+    }
+    return Greater_value;
+}
+
 int main()
 {
     TreeNode *root = takeInputLevelWise();
+    cout<<"*******************"<<endl;
     printTreeLevelWise(root);
+    cout<<"*******************"<<endl;
+
+   cout<< "largest value of the node is : "<<Greater_Node_Value(root);
 }

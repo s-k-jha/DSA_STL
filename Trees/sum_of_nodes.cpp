@@ -65,8 +65,18 @@ TreeNode *takeInputLevelWise()
     }
     return root;
 }
+
+int sumOfnodes(TreeNode*root){
+    int sum=root->data;
+    for(int i=0; i < root->children.size();i++){
+        sum+=sumOfnodes(root->children[i]);
+    }
+    return sum;
+}
+
 int main()
 {
     TreeNode *root = takeInputLevelWise();
     printTreeLevelWise(root);
+    cout<<sumOfnodes(root); cout<<endl;
 }
