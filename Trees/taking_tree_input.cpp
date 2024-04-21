@@ -28,19 +28,20 @@ Node* takeInput(){
 
     Node*root= new Node(rootData);
 
-    int n;
+    int number_of_childs;
     cout<<"Enter no of children's "<<endl;
-    cin>>n;
+    cin>>number_of_childs;
 
-    for(int i=0;i<n;i++){
+    for(int i=0; i<number_of_childs; i++){
         Node * child= takeInput();
         root->children.push_back(child);
     }
     return root;
 }
 int main(){
+        //calling input function 
         Node *root = takeInput();
-
+        //calling print function
         printTree(root);
 
 }

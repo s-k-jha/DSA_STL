@@ -66,9 +66,9 @@ TreeNode *takeInputLevelWise()
                  << " child of " << front->data << endl;
             cin >> child;
 
-            TreeNode *chotu = new TreeNode(child);
-            front->children.push_back(chotu);
-            pendingNodes.push(chotu);
+            TreeNode *child_node = new TreeNode(child);
+            front->children.push_back(child_node);
+            pendingNodes.push(child_node);
         }
     }
     return root;
