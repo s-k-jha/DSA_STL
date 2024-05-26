@@ -71,6 +71,7 @@ bool containX(Node*root, int x){
             return true;
         }
     }
+    return false;
 }
 
 
